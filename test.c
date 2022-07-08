@@ -9,10 +9,10 @@ int main ()
   char str3[40];
 
   /* copy to sized buffer (overflow safe): */
-  strncpy ( str2, str1, sizeof(str2) );
+  strcpy ( str2, str1);
 
   /* partial copy (only 5 chars): */
-  strncpy ( str3, str2, 5 );
+  strncpy ( str3, str2, sizeof(str3) );
   str3[5] = '\0';   /* null character manually added */
 
   puts (str1);
